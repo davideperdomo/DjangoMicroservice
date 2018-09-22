@@ -28,4 +28,6 @@ Run server on Cloud9
 
 `$ python manage.py runserver $IP:$PORT`
 
-[Running in: ]:https://djangoquickstart-daeperdomocr.c9users.io/
+Users: https://djangoquickstart-daeperdomocr.c9users.io/users/
+
+Teams: https://djangoquickstart-daeperdomocr.c9users.io/teams/
