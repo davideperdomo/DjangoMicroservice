@@ -20,14 +20,18 @@ The Cloud9 IDE team
 # Django Microservice
 
 Activate virtualenv
-$ source env/bin/activate  # On Windows use `env\Scripts\activate`
+
+`$ source env/bin/activate`  # On Windows use `env\Scripts\activate`
 
 Install Django and Django REST framework into the virtualenv
-$ pip install django
-$ pip install djangorestframework
+
+`$ pip install django`
+`$ pip install djangorestframework`
 
 Sync databases
-$ python manage.py migrate
+
+`$ python manage.py migrate`
 
 Run server on Cloud9
-$ python manage.py runserver $IP:$PORT
+
+`$ python manage.py runserver $IP:$PORT`
