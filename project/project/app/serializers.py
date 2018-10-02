@@ -1,20 +1,17 @@
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from .models import Team
+from .models import Equipo
+# Mongo
+from rest_framework_mongoengine import serializers as mongoserializers
 
+class EquipoSerializer(mongoserializers.DocumentSerializer):
+    class Meta:
+        model = Equipo
+        fields = '__all__'
+##End Mongo
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ('url', 'name')
-        
-class TeamSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Team
-        fields = ('id','name','calification','sport','captain_id','squad')
+        fields = ('url', 'username', 'email')

@@ -6,28 +6,35 @@
      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
     ----------------------------------------------------------------- 
 
-# Django Microservice
+# Django + Mongo Microservice on Cloud9
+
+Configure Mongo 
+
+`mkdir data`
+
+`echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod`
+
+`chmod a+x mongod`
 
 Activate virtualenv
 
-`$ source env/bin/activate`  # On Windows use `env\Scripts\activate`
+`cd project`
 
-Install Django and Django REST framework into the virtualenv
+`source env/bin/activate`  # On Windows use `env\Scripts\activate`
 
-`$ pip install django`
+Install dependencies into the virtualenv
 
-`$ pip install djangorestframework`
+`pip install -r requirements.txt`
+
 
 Sync databases
 
+`cd project`
+
 `python manage.py makemigrations app`
 
-`$ python manage.py migrate`
+`python manage.py migrate`
 
 Run server on Cloud9
 
-`$ python manage.py runserver $IP:$PORT`
-
-Users: https://djangoquickstart-daeperdomocr.c9users.io/users/
-
-Teams: https://djangoquickstart-daeperdomocr.c9users.io/teams/
+`python manage.py runserver $IP:$PORT`
