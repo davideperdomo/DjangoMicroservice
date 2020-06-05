@@ -1,6 +1,6 @@
 certifi==2018.8.24
 chardet==3.0.4
-Django==1.11.15
+Django==1.11.29
 django-rest-framework-mongoengine==3.3.1
 djangorestframework==3.8.2
 docopt==0.6.2
